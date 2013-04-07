@@ -3,3 +3,28 @@
 }
 <script src="~/ViewModels/Closure.js"></script>
 <h2>Index</h2>
+
+<script type="text/javascript">
+    (function() {
+
+        var Person = function(first, last) {
+            var self = this;
+            self.firstName = first;
+            self.lastName = last;
+
+            _fullName = function() {
+                return self.firstName + " " + self.lastName;
+            };
+
+            return {
+                FullName: _fullName
+            };
+        };
+
+        var person = new Person("Derik", "Whittaker");
+
+        alert(person.FullName());
+
+    })();
+
+</script>
