@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Optimization;
+using BundleTransformer.Core.Transformers;
 
 namespace Typescript.DemoSource
 {
@@ -38,6 +39,11 @@ namespace Typescript.DemoSource
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            var typeScriptBundle = new ScriptBundle("~/bundles/ts")
+                .IncludeDirectory("~/ViewModels", "*.ts", true);
+            typeScriptBundle.Transforms.Add(new JsTransformer());
+            bundles.Add((typeScriptBundle));
         }
     }
 }

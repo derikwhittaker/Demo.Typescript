@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Typescript - The gateway drug";
+}
+<script src="~/ViewModels/Dog.js"></script>
+<script src="~/ViewModels/Person.js"></script>
+
+<h2>Typescript - The gateway drug</h2>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var dog = new Mammal.Dog();
+            var dingo = new Mammal.Dingo();
+
+            dog.bark("Saw woof");
+            dingo.bark("Dingo Bark");
+
+            var person = new Mammal.Person();
+
+            //person.walkIt(dog);
+            //person.walkIt(dingo);
+            //person.walkPack();
+        });
+    </script>
+}
+

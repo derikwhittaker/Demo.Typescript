@@ -1,5 +1,24 @@
-﻿@{
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Typescript - The gateway drug";
 }
 
 <h2>Typescript - The gateway drug</h2>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var dog = new mammal.Dog();
+            var dingo = new mammal.Dingo();
+            var person = new mammal.Person();
+            
+            //dog.bark("Say woof");
+
+            //person.walkId(dingo);
+            person.walkPack();
+        });
+    </script>
+}
+
