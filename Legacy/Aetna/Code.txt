@@ -1,0 +1,9 @@
+Create dog class
+module Mammal{
+    export class Dog{
+        public Bark(message) {
+            console.log(message);
+        }
+    }
+}
+
